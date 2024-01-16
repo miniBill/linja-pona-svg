@@ -40,7 +40,7 @@ for line in lines:
 
     print(
         replaced,
-        f'\n<ruby><div style="display:inline-block;background-color:currentColor;width:{width}px;height:{height}px;mask:url(https://toki-pona-svg.netlify.app/{replaced}.svg)"></div> <rt>{replaced.replace("-"," ")}</rt></ruby>\n',
+        f'\n<ruby><div style="display:inline-block;background-color:currentColor;width:{width*2}px;height:{height*2}px;mask:url(https://toki-pona-svg.netlify.app/{replaced}.svg)"></div> <rt>{replaced.replace("-"," ")}</rt></ruby>\n',
     )
 
 # <div style="background-color: currentColor; height: 18px; mask: url(http://localhost:8080/output.svg);width: 154px;display: inline-block;"></div>
