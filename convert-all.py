@@ -12,6 +12,8 @@ lines.sort()
 
 size_regex = re.compile('width="(\\d+)" height="(\\d+)"')
 
+print('<div style="display:flex; flex-wrap: wrap;align-items: end;">\n')
+
 for line in lines:
     replaced = line.replace(" ", "-").replace("+", "-")
     svg_filename = f"output/{replaced}.svg"
@@ -40,7 +42,5 @@ for line in lines:
 
     print(
         replaced,
-        f'\n<ruby><div style="display:inline-block;background-color:currentColor;width:{width*2}px;height:{height*2}px;mask:url(https://toki-pona-svg.netlify.app/{replaced}.svg)"></div> <rt>{replaced.replace("-"," ")}</rt></ruby>\n',
+        f'\n<div style="display:inline-flex;flex-direction:column"><div style="font-size: 0.5em">{replaced.replace("-"," ")}</div><div style="display:inline-block;background-color:currentColor;width:{width*2}px;height:{height*2}px;mask:url(https://toki-pona-svg.netlify.app/{replaced}.svg)"></div></div>\n',
     )
-
-# <div style="background-color: currentColor; height: 18px; mask: url(http://localhost:8080/output.svg);width: 154px;display: inline-block;"></div>

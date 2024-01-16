@@ -1,0 +1,4 @@
+[[headers]]
+for = "/*"
+  [heders.values]
+  Access-Control-Allow-Origin = "*"
