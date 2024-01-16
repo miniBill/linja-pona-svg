@@ -35,12 +35,12 @@ for line in lines:
                 width = int(width) - 20
                 height = int(height) - 20
                 print(
-                    f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{width}" height="{height}" viewBox="10 10 {width} {height}">',
+                    f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{width*2}" height="{height*2}" viewBox="10 10 {width} {height}">',
                 )
             else:
                 print(svgline, end="")
 
     print(
         replaced,
-        f'\n<div style="display:inline-flex;flex-direction:column"><div style="font-size: 0.5em">{replaced.replace("-"," ")}</div><div style="display:inline-block;background-color:currentColor;width:{width*2}px;height:{height*2}px;mask:url(https://toki-pona-svg.netlify.app/{replaced}.svg)"></div></div>\n',
+        f'\n<div style="display:inline-flex;flex-direction:column"><div style="font-size: 0.5em">{replaced.replace("-"," ")}</div><div style="display:inline-block;background-color:currentColor;width:{width}px;height:{height}px;mask:url(https://toki-pona-svg.netlify.app/{replaced}.svg)"></div></div>\n',
     )
